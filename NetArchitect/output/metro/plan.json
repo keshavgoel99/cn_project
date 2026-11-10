@@ -1,0 +1,794 @@
+{
+  "name": "Metro MAN",
+  "profile": "metro",
+  "root": "10.20.0.0/16",
+  "input": {
+    "name": "Metro MAN",
+    "profile": "metro",
+    "root": "10.20.0.0/16",
+    "resilient": true,
+    "growth_percent": 10,
+    "access_distance_m": 80,
+    "sites": [
+      {
+        "name": "HQ",
+        "distance_m": 50,
+        "groups": [
+          {
+            "name": "Finance",
+            "hosts": 220,
+            "vlan": 10,
+            "isolated": false,
+            "poe": false
+          },
+          {
+            "name": "Guest",
+            "hosts": 30,
+            "vlan": 20,
+            "isolated": true,
+            "poe": false
+          }
+        ]
+      },
+      {
+        "name": "Remote1",
+        "distance_m": 15000,
+        "groups": [
+          {
+            "name": "Finance",
+            "hosts": 80,
+            "vlan": 10,
+            "isolated": false,
+            "poe": false
+          },
+          {
+            "name": "Guest",
+            "hosts": 20,
+            "vlan": 20,
+            "isolated": true,
+            "poe": false
+          }
+        ]
+      },
+      {
+        "name": "Remote2",
+        "distance_m": 35000,
+        "fiber_attenuation_db_per_km": 0.22,
+        "groups": [
+          {
+            "name": "Finance",
+            "hosts": 80,
+            "vlan": 10,
+            "isolated": false,
+            "poe": false
+          },
+          {
+            "name": "Guest",
+            "hosts": 20,
+            "vlan": 20,
+            "isolated": true,
+            "poe": false
+          }
+        ]
+      }
+    ]
+  },
+  "endpoint_count": 450,
+  "sites": [
+    {
+      "name": "HQ",
+      "index": 0,
+      "groups": [
+        {
+          "name": "Finance",
+          "hosts": 220,
+          "vlan": 10,
+          "isolated": false,
+          "poe": false,
+          "planned_endpoints": 242,
+          "required_usable": 243,
+          "access_switches": 6,
+          "subnet": {
+            "name": "Finance",
+            "network": "10.20.0.0/24",
+            "prefix": 24,
+            "mask": "255.255.255.0",
+            "wildcard": "0.0.0.255",
+            "gateway": "10.20.0.1",
+            "first_usable": "10.20.0.1",
+            "last_usable": "10.20.0.254",
+            "broadcast": "10.20.0.255",
+            "required_usable": 243,
+            "usable_capacity": 254,
+            "total_addresses": 256,
+            "utilization_percent": 95.67,
+            "reason": "2^8 - 2 = 254 usable addresses >= 243; /25 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address."
+          },
+          "distribution_ports": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "name": "Guest",
+          "hosts": 30,
+          "vlan": 20,
+          "isolated": true,
+          "poe": false,
+          "planned_endpoints": 33,
+          "required_usable": 34,
+          "access_switches": 1,
+          "subnet": {
+            "name": "Guest",
+            "network": "10.20.1.0/26",
+            "prefix": 26,
+            "mask": "255.255.255.192",
+            "wildcard": "0.0.0.63",
+            "gateway": "10.20.1.1",
+            "first_usable": "10.20.1.1",
+            "last_usable": "10.20.1.62",
+            "broadcast": "10.20.1.63",
+            "required_usable": 34,
+            "usable_capacity": 62,
+            "total_addresses": 64,
+            "utilization_percent": 54.84,
+            "reason": "2^6 - 2 = 62 usable addresses >= 34; /27 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address."
+          },
+          "distribution_ports": [
+            7
+          ]
+        }
+      ],
+      "block_hosts": 510,
+      "access_switch_count": 7,
+      "asn": 65100,
+      "area": 1,
+      "distance_m": 50,
+      "summary": "10.20.0.0/23"
+    },
+    {
+      "name": "Remote1",
+      "index": 1,
+      "groups": [
+        {
+          "name": "Finance",
+          "hosts": 80,
+          "vlan": 10,
+          "isolated": false,
+          "poe": false,
+          "planned_endpoints": 88,
+          "required_usable": 89,
+          "access_switches": 2,
+          "subnet": {
+            "name": "Finance",
+            "network": "10.20.2.0/25",
+            "prefix": 25,
+            "mask": "255.255.255.128",
+            "wildcard": "0.0.0.127",
+            "gateway": "10.20.2.1",
+            "first_usable": "10.20.2.1",
+            "last_usable": "10.20.2.126",
+            "broadcast": "10.20.2.127",
+            "required_usable": 89,
+            "usable_capacity": 126,
+            "total_addresses": 128,
+            "utilization_percent": 70.63,
+            "reason": "2^7 - 2 = 126 usable addresses >= 89; /26 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address."
+          },
+          "distribution_ports": [
+            1,
+            2
+          ]
+        },
+        {
+          "name": "Guest",
+          "hosts": 20,
+          "vlan": 20,
+          "isolated": true,
+          "poe": false,
+          "planned_endpoints": 22,
+          "required_usable": 23,
+          "access_switches": 1,
+          "subnet": {
+            "name": "Guest",
+            "network": "10.20.2.128/27",
+            "prefix": 27,
+            "mask": "255.255.255.224",
+            "wildcard": "0.0.0.31",
+            "gateway": "10.20.2.129",
+            "first_usable": "10.20.2.129",
+            "last_usable": "10.20.2.158",
+            "broadcast": "10.20.2.159",
+            "required_usable": 23,
+            "usable_capacity": 30,
+            "total_addresses": 32,
+            "utilization_percent": 76.67,
+            "reason": "2^5 - 2 = 30 usable addresses >= 23; /28 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address."
+          },
+          "distribution_ports": [
+            3
+          ]
+        }
+      ],
+      "block_hosts": 254,
+      "access_switch_count": 3,
+      "asn": 65101,
+      "area": 2,
+      "distance_m": 15000,
+      "summary": "10.20.2.0/24"
+    },
+    {
+      "name": "Remote2",
+      "index": 2,
+      "groups": [
+        {
+          "name": "Finance",
+          "hosts": 80,
+          "vlan": 10,
+          "isolated": false,
+          "poe": false,
+          "planned_endpoints": 88,
+          "required_usable": 89,
+          "access_switches": 2,
+          "subnet": {
+            "name": "Finance",
+            "network": "10.20.3.0/25",
+            "prefix": 25,
+            "mask": "255.255.255.128",
+            "wildcard": "0.0.0.127",
+            "gateway": "10.20.3.1",
+            "first_usable": "10.20.3.1",
+            "last_usable": "10.20.3.126",
+            "broadcast": "10.20.3.127",
+            "required_usable": 89,
+            "usable_capacity": 126,
+            "total_addresses": 128,
+            "utilization_percent": 70.63,
+            "reason": "2^7 - 2 = 126 usable addresses >= 89; /26 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address."
+          },
+          "distribution_ports": [
+            1,
+            2
+          ]
+        },
+        {
+          "name": "Guest",
+          "hosts": 20,
+          "vlan": 20,
+          "isolated": true,
+          "poe": false,
+          "planned_endpoints": 22,
+          "required_usable": 23,
+          "access_switches": 1,
+          "subnet": {
+            "name": "Guest",
+            "network": "10.20.3.128/27",
+            "prefix": 27,
+            "mask": "255.255.255.224",
+            "wildcard": "0.0.0.31",
+            "gateway": "10.20.3.129",
+            "first_usable": "10.20.3.129",
+            "last_usable": "10.20.3.158",
+            "broadcast": "10.20.3.159",
+            "required_usable": 23,
+            "usable_capacity": 30,
+            "total_addresses": 32,
+            "utilization_percent": 76.67,
+            "reason": "2^5 - 2 = 30 usable addresses >= 23; /28 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address."
+          },
+          "distribution_ports": [
+            3
+          ]
+        }
+      ],
+      "block_hosts": 254,
+      "access_switch_count": 3,
+      "asn": 65102,
+      "area": 3,
+      "distance_m": 35000,
+      "summary": "10.20.3.0/24"
+    }
+  ],
+  "edges": [
+    {
+      "name": "HQ-R1",
+      "site": "HQ",
+      "site_index": 0,
+      "hub_copy": 0,
+      "ports": 3,
+      "router_id": "192.0.2.1",
+      "lan": {
+        "name": "lan:HQ-R1",
+        "network": "10.20.4.16/30",
+        "prefix": 30,
+        "mask": "255.255.255.252",
+        "wildcard": "0.0.0.3",
+        "gateway": "10.20.4.17",
+        "first_usable": "10.20.4.17",
+        "last_usable": "10.20.4.18",
+        "broadcast": "10.20.4.19",
+        "required_usable": 2,
+        "usable_capacity": 2,
+        "total_addresses": 4,
+        "utilization_percent": 100.0,
+        "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+      }
+    },
+    {
+      "name": "HQ-R2",
+      "site": "HQ",
+      "site_index": 0,
+      "hub_copy": 1,
+      "ports": 3,
+      "router_id": "192.0.2.2",
+      "lan": {
+        "name": "lan:HQ-R2",
+        "network": "10.20.4.20/30",
+        "prefix": 30,
+        "mask": "255.255.255.252",
+        "wildcard": "0.0.0.3",
+        "gateway": "10.20.4.21",
+        "first_usable": "10.20.4.21",
+        "last_usable": "10.20.4.22",
+        "broadcast": "10.20.4.23",
+        "required_usable": 2,
+        "usable_capacity": 2,
+        "total_addresses": 4,
+        "utilization_percent": 100.0,
+        "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+      }
+    },
+    {
+      "name": "Remote1-R1",
+      "site": "Remote1",
+      "site_index": 1,
+      "hub_copy": 0,
+      "ports": 3,
+      "router_id": "192.0.2.3",
+      "lan": {
+        "name": "lan:Remote1-R1",
+        "network": "10.20.4.24/30",
+        "prefix": 30,
+        "mask": "255.255.255.252",
+        "wildcard": "0.0.0.3",
+        "gateway": "10.20.4.25",
+        "first_usable": "10.20.4.25",
+        "last_usable": "10.20.4.26",
+        "broadcast": "10.20.4.27",
+        "required_usable": 2,
+        "usable_capacity": 2,
+        "total_addresses": 4,
+        "utilization_percent": 100.0,
+        "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+      }
+    },
+    {
+      "name": "Remote2-R1",
+      "site": "Remote2",
+      "site_index": 2,
+      "hub_copy": 0,
+      "ports": 3,
+      "router_id": "192.0.2.4",
+      "lan": {
+        "name": "lan:Remote2-R1",
+        "network": "10.20.4.28/30",
+        "prefix": 30,
+        "mask": "255.255.255.252",
+        "wildcard": "0.0.0.3",
+        "gateway": "10.20.4.29",
+        "first_usable": "10.20.4.29",
+        "last_usable": "10.20.4.30",
+        "broadcast": "10.20.4.31",
+        "required_usable": 2,
+        "usable_capacity": 2,
+        "total_addresses": 4,
+        "utilization_percent": 100.0,
+        "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+      }
+    }
+  ],
+  "links": [
+    {
+      "name": "backbone:HQ-R1:Remote1-R1",
+      "a": "HQ-R1",
+      "b": "Remote1-R1",
+      "a_port": 2,
+      "b_port": 2,
+      "secondary": false,
+      "subnet": {
+        "name": "backbone:HQ-R1:Remote1-R1",
+        "network": "10.20.4.0/30",
+        "prefix": 30,
+        "mask": "255.255.255.252",
+        "wildcard": "0.0.0.3",
+        "gateway": "10.20.4.1",
+        "first_usable": "10.20.4.1",
+        "last_usable": "10.20.4.2",
+        "broadcast": "10.20.4.3",
+        "required_usable": 2,
+        "usable_capacity": 2,
+        "total_addresses": 4,
+        "utilization_percent": 100.0,
+        "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+      }
+    },
+    {
+      "name": "backbone:HQ-R1:Remote2-R1",
+      "a": "HQ-R1",
+      "b": "Remote2-R1",
+      "a_port": 3,
+      "b_port": 2,
+      "secondary": false,
+      "subnet": {
+        "name": "backbone:HQ-R1:Remote2-R1",
+        "network": "10.20.4.4/30",
+        "prefix": 30,
+        "mask": "255.255.255.252",
+        "wildcard": "0.0.0.3",
+        "gateway": "10.20.4.5",
+        "first_usable": "10.20.4.5",
+        "last_usable": "10.20.4.6",
+        "broadcast": "10.20.4.7",
+        "required_usable": 2,
+        "usable_capacity": 2,
+        "total_addresses": 4,
+        "utilization_percent": 100.0,
+        "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+      }
+    },
+    {
+      "name": "backbone:HQ-R2:Remote1-R1",
+      "a": "HQ-R2",
+      "b": "Remote1-R1",
+      "a_port": 2,
+      "b_port": 3,
+      "secondary": true,
+      "subnet": {
+        "name": "backbone:HQ-R2:Remote1-R1",
+        "network": "10.20.4.8/30",
+        "prefix": 30,
+        "mask": "255.255.255.252",
+        "wildcard": "0.0.0.3",
+        "gateway": "10.20.4.9",
+        "first_usable": "10.20.4.9",
+        "last_usable": "10.20.4.10",
+        "broadcast": "10.20.4.11",
+        "required_usable": 2,
+        "usable_capacity": 2,
+        "total_addresses": 4,
+        "utilization_percent": 100.0,
+        "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+      }
+    },
+    {
+      "name": "backbone:HQ-R2:Remote2-R1",
+      "a": "HQ-R2",
+      "b": "Remote2-R1",
+      "a_port": 3,
+      "b_port": 3,
+      "secondary": true,
+      "subnet": {
+        "name": "backbone:HQ-R2:Remote2-R1",
+        "network": "10.20.4.12/30",
+        "prefix": 30,
+        "mask": "255.255.255.252",
+        "wildcard": "0.0.0.3",
+        "gateway": "10.20.4.13",
+        "first_usable": "10.20.4.13",
+        "last_usable": "10.20.4.14",
+        "broadcast": "10.20.4.15",
+        "required_usable": 2,
+        "usable_capacity": 2,
+        "total_addresses": 4,
+        "utilization_percent": 100.0,
+        "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+      }
+    }
+  ],
+  "allocations": [
+    {
+      "name": "HQ:Finance",
+      "network": "10.20.0.0/24",
+      "prefix": 24,
+      "mask": "255.255.255.0",
+      "wildcard": "0.0.0.255",
+      "gateway": "10.20.0.1",
+      "first_usable": "10.20.0.1",
+      "last_usable": "10.20.0.254",
+      "broadcast": "10.20.0.255",
+      "required_usable": 243,
+      "usable_capacity": 254,
+      "total_addresses": 256,
+      "utilization_percent": 95.67,
+      "reason": "2^8 - 2 = 254 usable addresses >= 243; /25 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address.",
+      "site": "HQ",
+      "vlan": 10
+    },
+    {
+      "name": "HQ:Guest",
+      "network": "10.20.1.0/26",
+      "prefix": 26,
+      "mask": "255.255.255.192",
+      "wildcard": "0.0.0.63",
+      "gateway": "10.20.1.1",
+      "first_usable": "10.20.1.1",
+      "last_usable": "10.20.1.62",
+      "broadcast": "10.20.1.63",
+      "required_usable": 34,
+      "usable_capacity": 62,
+      "total_addresses": 64,
+      "utilization_percent": 54.84,
+      "reason": "2^6 - 2 = 62 usable addresses >= 34; /27 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address.",
+      "site": "HQ",
+      "vlan": 20
+    },
+    {
+      "name": "Remote1:Finance",
+      "network": "10.20.2.0/25",
+      "prefix": 25,
+      "mask": "255.255.255.128",
+      "wildcard": "0.0.0.127",
+      "gateway": "10.20.2.1",
+      "first_usable": "10.20.2.1",
+      "last_usable": "10.20.2.126",
+      "broadcast": "10.20.2.127",
+      "required_usable": 89,
+      "usable_capacity": 126,
+      "total_addresses": 128,
+      "utilization_percent": 70.63,
+      "reason": "2^7 - 2 = 126 usable addresses >= 89; /26 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address.",
+      "site": "Remote1",
+      "vlan": 10
+    },
+    {
+      "name": "Remote1:Guest",
+      "network": "10.20.2.128/27",
+      "prefix": 27,
+      "mask": "255.255.255.224",
+      "wildcard": "0.0.0.31",
+      "gateway": "10.20.2.129",
+      "first_usable": "10.20.2.129",
+      "last_usable": "10.20.2.158",
+      "broadcast": "10.20.2.159",
+      "required_usable": 23,
+      "usable_capacity": 30,
+      "total_addresses": 32,
+      "utilization_percent": 76.67,
+      "reason": "2^5 - 2 = 30 usable addresses >= 23; /28 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address.",
+      "site": "Remote1",
+      "vlan": 20
+    },
+    {
+      "name": "Remote2:Finance",
+      "network": "10.20.3.0/25",
+      "prefix": 25,
+      "mask": "255.255.255.128",
+      "wildcard": "0.0.0.127",
+      "gateway": "10.20.3.1",
+      "first_usable": "10.20.3.1",
+      "last_usable": "10.20.3.126",
+      "broadcast": "10.20.3.127",
+      "required_usable": 89,
+      "usable_capacity": 126,
+      "total_addresses": 128,
+      "utilization_percent": 70.63,
+      "reason": "2^7 - 2 = 126 usable addresses >= 89; /26 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address.",
+      "site": "Remote2",
+      "vlan": 10
+    },
+    {
+      "name": "Remote2:Guest",
+      "network": "10.20.3.128/27",
+      "prefix": 27,
+      "mask": "255.255.255.224",
+      "wildcard": "0.0.0.31",
+      "gateway": "10.20.3.129",
+      "first_usable": "10.20.3.129",
+      "last_usable": "10.20.3.158",
+      "broadcast": "10.20.3.159",
+      "required_usable": 23,
+      "usable_capacity": 30,
+      "total_addresses": 32,
+      "utilization_percent": 76.67,
+      "reason": "2^5 - 2 = 30 usable addresses >= 23; /28 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address.",
+      "site": "Remote2",
+      "vlan": 20
+    },
+    {
+      "name": "lan:HQ-R1",
+      "network": "10.20.4.16/30",
+      "prefix": 30,
+      "mask": "255.255.255.252",
+      "wildcard": "0.0.0.3",
+      "gateway": "10.20.4.17",
+      "first_usable": "10.20.4.17",
+      "last_usable": "10.20.4.18",
+      "broadcast": "10.20.4.19",
+      "required_usable": 2,
+      "usable_capacity": 2,
+      "total_addresses": 4,
+      "utilization_percent": 100.0,
+      "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+    },
+    {
+      "name": "lan:HQ-R2",
+      "network": "10.20.4.20/30",
+      "prefix": 30,
+      "mask": "255.255.255.252",
+      "wildcard": "0.0.0.3",
+      "gateway": "10.20.4.21",
+      "first_usable": "10.20.4.21",
+      "last_usable": "10.20.4.22",
+      "broadcast": "10.20.4.23",
+      "required_usable": 2,
+      "usable_capacity": 2,
+      "total_addresses": 4,
+      "utilization_percent": 100.0,
+      "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+    },
+    {
+      "name": "lan:Remote1-R1",
+      "network": "10.20.4.24/30",
+      "prefix": 30,
+      "mask": "255.255.255.252",
+      "wildcard": "0.0.0.3",
+      "gateway": "10.20.4.25",
+      "first_usable": "10.20.4.25",
+      "last_usable": "10.20.4.26",
+      "broadcast": "10.20.4.27",
+      "required_usable": 2,
+      "usable_capacity": 2,
+      "total_addresses": 4,
+      "utilization_percent": 100.0,
+      "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+    },
+    {
+      "name": "lan:Remote2-R1",
+      "network": "10.20.4.28/30",
+      "prefix": 30,
+      "mask": "255.255.255.252",
+      "wildcard": "0.0.0.3",
+      "gateway": "10.20.4.29",
+      "first_usable": "10.20.4.29",
+      "last_usable": "10.20.4.30",
+      "broadcast": "10.20.4.31",
+      "required_usable": 2,
+      "usable_capacity": 2,
+      "total_addresses": 4,
+      "utilization_percent": 100.0,
+      "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+    },
+    {
+      "name": "backbone:HQ-R1:Remote1-R1",
+      "network": "10.20.4.0/30",
+      "prefix": 30,
+      "mask": "255.255.255.252",
+      "wildcard": "0.0.0.3",
+      "gateway": "10.20.4.1",
+      "first_usable": "10.20.4.1",
+      "last_usable": "10.20.4.2",
+      "broadcast": "10.20.4.3",
+      "required_usable": 2,
+      "usable_capacity": 2,
+      "total_addresses": 4,
+      "utilization_percent": 100.0,
+      "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+    },
+    {
+      "name": "backbone:HQ-R1:Remote2-R1",
+      "network": "10.20.4.4/30",
+      "prefix": 30,
+      "mask": "255.255.255.252",
+      "wildcard": "0.0.0.3",
+      "gateway": "10.20.4.5",
+      "first_usable": "10.20.4.5",
+      "last_usable": "10.20.4.6",
+      "broadcast": "10.20.4.7",
+      "required_usable": 2,
+      "usable_capacity": 2,
+      "total_addresses": 4,
+      "utilization_percent": 100.0,
+      "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+    },
+    {
+      "name": "backbone:HQ-R2:Remote1-R1",
+      "network": "10.20.4.8/30",
+      "prefix": 30,
+      "mask": "255.255.255.252",
+      "wildcard": "0.0.0.3",
+      "gateway": "10.20.4.9",
+      "first_usable": "10.20.4.9",
+      "last_usable": "10.20.4.10",
+      "broadcast": "10.20.4.11",
+      "required_usable": 2,
+      "usable_capacity": 2,
+      "total_addresses": 4,
+      "utilization_percent": 100.0,
+      "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+    },
+    {
+      "name": "backbone:HQ-R2:Remote2-R1",
+      "network": "10.20.4.12/30",
+      "prefix": 30,
+      "mask": "255.255.255.252",
+      "wildcard": "0.0.0.3",
+      "gateway": "10.20.4.13",
+      "first_usable": "10.20.4.13",
+      "last_usable": "10.20.4.14",
+      "broadcast": "10.20.4.15",
+      "required_usable": 2,
+      "usable_capacity": 2,
+      "total_addresses": 4,
+      "utilization_percent": 100.0,
+      "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+    }
+  ],
+  "routing": {
+    "protocol": "OSPF Area 0",
+    "reason": "One administrative domain and 14 active subnets (<50) fit the assignment's single-area rule. OSPF (RFC 2328) computes shortest paths and recalculates after failure. The 50-subnet cutoff is an assignment policy, not an RFC protocol limit."
+  },
+  "media": [
+    {
+      "name": "Endpoint access",
+      "medium": "Cat6a",
+      "transceiver": "10GBASE-T",
+      "distance_m": 80,
+      "reason": "80 m <= 100 m: Cat6a supports the assignment's 10GBASE-T access channel (IEEE 802.3an). The channel includes patch leads."
+    },
+    {
+      "name": "In-rack links",
+      "medium": "Cat6a",
+      "transceiver": "10GBASE-T",
+      "distance_m": 5,
+      "reason": "5 m <= 100 m: Cat6a supports the assignment's 10GBASE-T access channel (IEEE 802.3an). The channel includes patch leads."
+    },
+    {
+      "name": "HQ local routed uplink",
+      "medium": "Cat6a",
+      "transceiver": "10GBASE-T",
+      "distance_m": 50,
+      "reason": "50 m <= 100 m: Cat6a supports the assignment's 10GBASE-T access channel (IEEE 802.3an). The channel includes patch leads."
+    },
+    {
+      "name": "HQ to Remote1",
+      "medium": "OS2 SMF",
+      "transceiver": "10GBASE-ER",
+      "wavelength_nm": 1550,
+      "distance_m": 15000,
+      "estimated_loss_db": 5.9,
+      "budget_db": 11.1,
+      "margin_db": 5.2,
+      "reason": "OS2 10GBASE-ER (1550 nm) chosen for 15000 m. Estimated loss = 15 km x 0.3 dB/km + 2 connectors x 0.5 + 4 splices x 0.1 = 5.90 dB; budget 11.1 dB leaves 5.20 dB. Minimum reserve is 1 dB. Attenuation is a planning input, not a measured result. Check actual optics, receiver overload/attenuator needs and measured loss."
+    },
+    {
+      "name": "HQ to Remote2",
+      "medium": "OS2 SMF",
+      "transceiver": "10GBASE-ER",
+      "wavelength_nm": 1550,
+      "distance_m": 35000,
+      "estimated_loss_db": 9.1,
+      "budget_db": 11.1,
+      "margin_db": 2.0,
+      "reason": "OS2 10GBASE-ER (1550 nm) chosen for 35000 m. Estimated loss = 35 km x 0.22 dB/km + 2 connectors x 0.5 + 4 splices x 0.1 = 9.10 dB; budget 11.1 dB leaves 2.00 dB. Minimum reserve is 1 dB. Attenuation is a planning input, not a measured result. Check actual optics, receiver overload/attenuator needs and measured loss."
+    }
+  ],
+  "topology_reason": "Two HQ edge routers connect 2 remote sites. Routed links keep broadcasts local; 802.1Q trunks are limited to each access switch's VLAN and unused native VLAN 999. Rapid-PVST (RSTP per VLAN) protects local L2 wiring. Independent spoke links to both hubs provide dual-homed path failover. 48-port access switches are counted from planned endpoints, with one VLAN per switch.",
+  "address_summary": {
+    "reserved_addresses": 1056,
+    "root_addresses": 65536,
+    "root_reserved_percent": 1.61,
+    "reason": "Each site's VLAN blocks are placed largest-first inside an aligned site aggregate. Site aggregates and /30 transit blocks are then placed largest-first in the root. Aggregates are reservations, not extra active subnets."
+  },
+  "warnings": [
+    "Configurations target a lab IOS/IOS XE feature set. Match interface names and supported commands to the chosen image before pasting.",
+    "End hosts use static addresses; DHCP, DNS, Internet access and NAT are outside this lab.",
+    "One distribution switch and one router at each remote site remain single points of failure.",
+    "The MAN is a routed hub-and-spoke design carried by two independent EVPL E-Line services to different HQ edge routers. Provider EVC/VLAN mapping is external.",
+    "Sub-5 ms is a latency target, not an OSPF convergence promise. Fibre propagation RTT at 35 km is about 0.35 ms; provider queuing and equipment delays must be measured.",
+    "OS2 ER at 35 km needs a measured optical budget. If loss exceeds the stated assumption, use engineered optics or a managed service."
+  ]
+}

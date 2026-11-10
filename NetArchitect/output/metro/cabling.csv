@@ -1,0 +1,22 @@
+device_a,port_a,device_b,port_b,purpose,subnet
+HQ-DS,Te1/0/1,HQ-Finance-AS1,Te1/1/1,802.1Q trunk,-
+HQ-DS,Te1/0/2,HQ-Finance-AS2,Te1/1/1,802.1Q trunk,-
+HQ-DS,Te1/0/3,HQ-Finance-AS3,Te1/1/1,802.1Q trunk,-
+HQ-DS,Te1/0/4,HQ-Finance-AS4,Te1/1/1,802.1Q trunk,-
+HQ-DS,Te1/0/5,HQ-Finance-AS5,Te1/1/1,802.1Q trunk,-
+HQ-DS,Te1/0/6,HQ-Finance-AS6,Te1/1/1,802.1Q trunk,-
+HQ-DS,Te1/0/7,HQ-Guest-AS1,Te1/1/1,802.1Q trunk,-
+HQ-DS,Te1/0/47,HQ-R1,Gi1,routed LAN uplink,10.20.4.16/30
+HQ-DS,Te1/0/48,HQ-R2,Gi1,routed LAN uplink,10.20.4.20/30
+Remote1-DS,Te1/0/1,Remote1-Finance-AS1,Te1/1/1,802.1Q trunk,-
+Remote1-DS,Te1/0/2,Remote1-Finance-AS2,Te1/1/1,802.1Q trunk,-
+Remote1-DS,Te1/0/3,Remote1-Guest-AS1,Te1/1/1,802.1Q trunk,-
+Remote1-DS,Te1/0/47,Remote1-R1,Gi1,routed LAN uplink,10.20.4.24/30
+Remote2-DS,Te1/0/1,Remote2-Finance-AS1,Te1/1/1,802.1Q trunk,-
+Remote2-DS,Te1/0/2,Remote2-Finance-AS2,Te1/1/1,802.1Q trunk,-
+Remote2-DS,Te1/0/3,Remote2-Guest-AS1,Te1/1/1,802.1Q trunk,-
+Remote2-DS,Te1/0/47,Remote2-R1,Gi1,routed LAN uplink,10.20.4.28/30
+HQ-R1,GigabitEthernet2,Remote1-R1,Gi2,backbone / EVPL E-Line,10.20.4.0/30
+HQ-R1,GigabitEthernet3,Remote2-R1,Gi2,backbone / EVPL E-Line,10.20.4.4/30
+HQ-R2,GigabitEthernet2,Remote1-R1,Gi3,backbone / EVPL E-Line,10.20.4.8/30
+HQ-R2,GigabitEthernet3,Remote2-R1,Gi3,backbone / EVPL E-Line,10.20.4.12/30

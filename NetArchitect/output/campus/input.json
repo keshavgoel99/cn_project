@@ -1,0 +1,70 @@
+{
+  "name": "Campus LAN",
+  "profile": "campus",
+  "root": "10.10.0.0/16",
+  "resilient": false,
+  "growth_percent": 10,
+  "access_distance_m": 70,
+  "sites": [
+    {
+      "name": "Admin",
+      "distance_m": 50,
+      "groups": [
+        {
+          "name": "Staff",
+          "hosts": 300,
+          "vlan": 10,
+          "isolated": false,
+          "poe": false
+        },
+        {
+          "name": "WiFi",
+          "hosts": 100,
+          "vlan": 20,
+          "isolated": false,
+          "poe": true
+        }
+      ]
+    },
+    {
+      "name": "Teaching",
+      "distance_m": 220,
+      "groups": [
+        {
+          "name": "Students",
+          "hosts": 600,
+          "vlan": 10,
+          "isolated": false,
+          "poe": false
+        },
+        {
+          "name": "WiFi",
+          "hosts": 100,
+          "vlan": 20,
+          "isolated": false,
+          "poe": true
+        }
+      ]
+    },
+    {
+      "name": "Library",
+      "distance_m": 380,
+      "groups": [
+        {
+          "name": "Readers",
+          "hosts": 400,
+          "vlan": 10,
+          "isolated": false,
+          "poe": false
+        },
+        {
+          "name": "WiFi",
+          "hosts": 100,
+          "vlan": 20,
+          "isolated": false,
+          "poe": true
+        }
+      ]
+    }
+  ]
+}

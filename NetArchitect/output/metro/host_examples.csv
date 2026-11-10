@@ -1,0 +1,7 @@
+site,group,vlan,host_ip,mask,gateway,isolated
+HQ,Finance,10,10.20.0.2,255.255.255.0,10.20.0.1,False
+HQ,Guest,20,10.20.1.2,255.255.255.192,10.20.1.1,True
+Remote1,Finance,10,10.20.2.2,255.255.255.128,10.20.2.1,False
+Remote1,Guest,20,10.20.2.130,255.255.255.224,10.20.2.129,True
+Remote2,Finance,10,10.20.3.2,255.255.255.128,10.20.3.1,False
+Remote2,Guest,20,10.20.3.130,255.255.255.224,10.20.3.129,True

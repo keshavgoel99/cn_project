@@ -1,0 +1,61 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1100' height='600' viewBox='0 0 1100 600' role='img' aria-labelledby='title desc'>
+<title id='title'>Global WAN topology</title>
+<desc id='desc'>Hub and spoke logical topology with per-site distribution and access switches. Dashed paths are secondary links.</desc>
+<style>text{font-family:Arial,sans-serif;fill:#183441;font-size:14px}.small{font-size:12px;fill:#516b77}.box{fill:#edf4f7;stroke:#396577;stroke-width:1.5}.edge{fill:#dceee9;stroke:#26715b;stroke-width:1.5}line{stroke:#627f8c;stroke-width:2}.secondary{stroke-dasharray:7 5;stroke:#b08036}</style>
+<rect width='1100' height='600' fill='white'/>
+<text x='35' y='35' style='font-size:24px;font-weight:bold'>Global WAN</text>
+<line x1='550' y1='110' x2='410' y2='160' class=''/>
+<line x1='410' y1='202' x2='137.5' y2='345' class=''/>
+<line x1='410' y1='202' x2='412.5' y2='345' class=''/>
+<line x1='410' y1='202' x2='687.5' y2='345' class=''/>
+<line x1='410' y1='202' x2='962.5' y2='345' class=''/>
+<line x1='550' y1='110' x2='690' y2='160' class='secondary'/>
+<line x1='690' y1='202' x2='137.5' y2='345' class='secondary'/>
+<line x1='690' y1='202' x2='412.5' y2='345' class='secondary'/>
+<line x1='690' y1='202' x2='687.5' y2='345' class='secondary'/>
+<line x1='690' y1='202' x2='962.5' y2='345' class='secondary'/>
+<line x1='137.5' y1='387' x2='137.5' y2='425' class=''/>
+<line x1='137.5' y1='467' x2='137.5' y2='505' class=''/>
+<line x1='412.5' y1='387' x2='412.5' y2='425' class=''/>
+<line x1='412.5' y1='467' x2='412.5' y2='505' class=''/>
+<line x1='687.5' y1='387' x2='687.5' y2='425' class=''/>
+<line x1='687.5' y1='467' x2='687.5' y2='505' class=''/>
+<line x1='962.5' y1='387' x2='962.5' y2='425' class=''/>
+<line x1='962.5' y1='467' x2='962.5' y2='505' class=''/>
+<rect x='435.0' y='68' width='230' height='42' rx='5' class='box'/>
+<text x='550' y='94.0' text-anchor='middle' class=''>Delhi-DS</text>
+<text x='550' y='56' text-anchor='middle' class='small'>13 access switches at hub</text>
+<rect x='310.0' y='160' width='200' height='42' rx='5' class='edge'/>
+<text x='410' y='186.0' text-anchor='middle' class=''>Delhi-R1</text>
+<rect x='590.0' y='160' width='200' height='42' rx='5' class='edge'/>
+<text x='690' y='186.0' text-anchor='middle' class=''>Delhi-R2</text>
+<text x='900' y='35' text-anchor='middle' class=''>eBGP over GRE + IPsec</text>
+<rect x='37.5' y='345' width='200' height='42' rx='5' class='edge'/>
+<text x='137.5' y='371.0' text-anchor='middle' class=''>Mumbai-R1</text>
+<rect x='37.5' y='425' width='200' height='42' rx='5' class='box'/>
+<text x='137.5' y='451.0' text-anchor='middle' class=''>Mumbai-DS</text>
+<rect x='37.5' y='505' width='200' height='42' rx='5' class='box'/>
+<text x='137.5' y='531.0' text-anchor='middle' class=''>13 access switches</text>
+<text x='137.5' y='570' text-anchor='middle' class='small'>10.30.12.0/22</text>
+<rect x='312.5' y='345' width='200' height='42' rx='5' class='edge'/>
+<text x='412.5' y='371.0' text-anchor='middle' class=''>Chennai-R1</text>
+<rect x='312.5' y='425' width='200' height='42' rx='5' class='box'/>
+<text x='412.5' y='451.0' text-anchor='middle' class=''>Chennai-DS</text>
+<rect x='312.5' y='505' width='200' height='42' rx='5' class='box'/>
+<text x='412.5' y='531.0' text-anchor='middle' class=''>13 access switches</text>
+<text x='412.5' y='570' text-anchor='middle' class='small'>10.30.0.0/22</text>
+<rect x='587.5' y='345' width='200' height='42' rx='5' class='edge'/>
+<text x='687.5' y='371.0' text-anchor='middle' class=''>Kolkata-R1</text>
+<rect x='587.5' y='425' width='200' height='42' rx='5' class='box'/>
+<text x='687.5' y='451.0' text-anchor='middle' class=''>Kolkata-DS</text>
+<rect x='587.5' y='505' width='200' height='42' rx='5' class='box'/>
+<text x='687.5' y='531.0' text-anchor='middle' class=''>13 access switches</text>
+<text x='687.5' y='570' text-anchor='middle' class='small'>10.30.8.0/22</text>
+<rect x='862.5' y='345' width='200' height='42' rx='5' class='edge'/>
+<text x='962.5' y='371.0' text-anchor='middle' class=''>CloudVPC-R1</text>
+<rect x='862.5' y='425' width='200' height='42' rx='5' class='box'/>
+<text x='962.5' y='451.0' text-anchor='middle' class=''>CloudVPC-DS</text>
+<rect x='862.5' y='505' width='200' height='42' rx='5' class='box'/>
+<text x='962.5' y='531.0' text-anchor='middle' class=''>1 access switch</text>
+<text x='962.5' y='570' text-anchor='middle' class='small'>10.30.16.0/27</text>
+<text x='550' y='595' text-anchor='middle' class='small'>Logical overlay; provider underlay omitted. See cabling.csv for ports. Dashed lines are backup paths.</text></svg>

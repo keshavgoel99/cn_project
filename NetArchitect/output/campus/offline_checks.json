@@ -1,0 +1,111 @@
+{
+  "method": "Offline integer/IP, logical graph and generated-ACL evaluation; no IOS execution.",
+  "passed": true,
+  "checks": [
+    {
+      "name": "non_overlapping_subnets",
+      "passed": true,
+      "detail": "Pairwise comparison of active VLAN, LAN transit and backbone/tunnel subnets."
+    },
+    {
+      "name": "inside_root",
+      "passed": true,
+      "detail": "Every active private subnet belongs to the input root."
+    },
+    {
+      "name": "normal_connectivity",
+      "passed": true,
+      "detail": "Logical topology graph reaches every distribution switch."
+    },
+    {
+      "name": "gateway:Admin:Staff",
+      "passed": true,
+      "detail": "ICMP 10.10.8.2 -> 10.10.8.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Admin:Staff",
+      "passed": true,
+      "detail": "ICMP 10.10.8.2 -> 10.10.0.2: expected permit. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Admin:Staff",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:Admin:WiFi",
+      "passed": true,
+      "detail": "ICMP 10.10.10.2 -> 10.10.10.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Admin:WiFi",
+      "passed": true,
+      "detail": "ICMP 10.10.10.2 -> 10.10.0.2: expected permit. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Admin:WiFi",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:Teaching:Students",
+      "passed": true,
+      "detail": "ICMP 10.10.0.2 -> 10.10.0.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Teaching:Students",
+      "passed": true,
+      "detail": "ICMP 10.10.0.2 -> 10.10.8.2: expected permit. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Teaching:Students",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:Teaching:WiFi",
+      "passed": true,
+      "detail": "ICMP 10.10.4.2 -> 10.10.4.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Teaching:WiFi",
+      "passed": true,
+      "detail": "ICMP 10.10.4.2 -> 10.10.8.2: expected permit. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Teaching:WiFi",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:Library:Readers",
+      "passed": true,
+      "detail": "ICMP 10.10.12.2 -> 10.10.12.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Library:Readers",
+      "passed": true,
+      "detail": "ICMP 10.10.12.2 -> 10.10.8.2: expected permit. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Library:Readers",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:Library:WiFi",
+      "passed": true,
+      "detail": "ICMP 10.10.14.2 -> 10.10.14.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Library:WiFi",
+      "passed": true,
+      "detail": "ICMP 10.10.14.2 -> 10.10.8.2: expected permit. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Library:WiFi",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    }
+  ]
+}

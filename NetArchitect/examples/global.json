@@ -1,0 +1,103 @@
+{
+  "name": "Global WAN",
+  "profile": "global",
+  "root": "10.30.0.0/16",
+  "resilient": true,
+  "growth_percent": 10,
+  "access_distance_m": 60,
+  "sites": [
+    {
+      "name": "Delhi",
+      "distance_m": 50,
+      "groups": [
+        {
+          "name": "IoT",
+          "hosts": 400,
+          "vlan": 10,
+          "isolated": true,
+          "poe": false
+        },
+        {
+          "name": "Scanners",
+          "hosts": 100,
+          "vlan": 20,
+          "isolated": false,
+          "poe": false
+        }
+      ]
+    },
+    {
+      "name": "Mumbai",
+      "distance_m": 1400000,
+      "groups": [
+        {
+          "name": "IoT",
+          "hosts": 400,
+          "vlan": 10,
+          "isolated": true,
+          "poe": false
+        },
+        {
+          "name": "Scanners",
+          "hosts": 100,
+          "vlan": 20,
+          "isolated": false,
+          "poe": false
+        }
+      ]
+    },
+    {
+      "name": "Chennai",
+      "distance_m": 2200000,
+      "groups": [
+        {
+          "name": "IoT",
+          "hosts": 400,
+          "vlan": 10,
+          "isolated": true,
+          "poe": false
+        },
+        {
+          "name": "Scanners",
+          "hosts": 100,
+          "vlan": 20,
+          "isolated": false,
+          "poe": false
+        }
+      ]
+    },
+    {
+      "name": "Kolkata",
+      "distance_m": 1500000,
+      "groups": [
+        {
+          "name": "IoT",
+          "hosts": 400,
+          "vlan": 10,
+          "isolated": true,
+          "poe": false
+        },
+        {
+          "name": "Scanners",
+          "hosts": 100,
+          "vlan": 20,
+          "isolated": false,
+          "poe": false
+        }
+      ]
+    },
+    {
+      "name": "CloudVPC",
+      "distance_m": 1000000,
+      "groups": [
+        {
+          "name": "Services",
+          "hosts": 20,
+          "vlan": 10,
+          "isolated": false,
+          "poe": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+device,role,active_ports,vlan
+Delhi-IoT-AS1,48-port access,49,10
+Delhi-IoT-AS2,48-port access,49,10
+Delhi-IoT-AS3,48-port access,49,10
+Delhi-IoT-AS4,48-port access,49,10
+Delhi-IoT-AS5,48-port access,49,10
+Delhi-IoT-AS6,48-port access,49,10
+Delhi-IoT-AS7,48-port access,49,10
+Delhi-IoT-AS8,48-port access,49,10
+Delhi-IoT-AS9,48-port access,49,10
+Delhi-IoT-AS10,48-port access,9,10
+Delhi-Scanners-AS1,48-port access,49,20
+Delhi-Scanners-AS2,48-port access,49,20
+Delhi-Scanners-AS3,48-port access,15,20
+Delhi-DS,48-port multilayer distribution,15,
+Mumbai-IoT-AS1,48-port access,49,10
+Mumbai-IoT-AS2,48-port access,49,10
+Mumbai-IoT-AS3,48-port access,49,10
+Mumbai-IoT-AS4,48-port access,49,10
+Mumbai-IoT-AS5,48-port access,49,10
+Mumbai-IoT-AS6,48-port access,49,10
+Mumbai-IoT-AS7,48-port access,49,10
+Mumbai-IoT-AS8,48-port access,49,10
+Mumbai-IoT-AS9,48-port access,49,10
+Mumbai-IoT-AS10,48-port access,9,10
+Mumbai-Scanners-AS1,48-port access,49,20
+Mumbai-Scanners-AS2,48-port access,49,20
+Mumbai-Scanners-AS3,48-port access,15,20
+Mumbai-DS,48-port multilayer distribution,14,
+Chennai-IoT-AS1,48-port access,49,10
+Chennai-IoT-AS2,48-port access,49,10
+Chennai-IoT-AS3,48-port access,49,10
+Chennai-IoT-AS4,48-port access,49,10
+Chennai-IoT-AS5,48-port access,49,10
+Chennai-IoT-AS6,48-port access,49,10
+Chennai-IoT-AS7,48-port access,49,10
+Chennai-IoT-AS8,48-port access,49,10
+Chennai-IoT-AS9,48-port access,49,10
+Chennai-IoT-AS10,48-port access,9,10
+Chennai-Scanners-AS1,48-port access,49,20
+Chennai-Scanners-AS2,48-port access,49,20
+Chennai-Scanners-AS3,48-port access,15,20
+Chennai-DS,48-port multilayer distribution,14,
+Kolkata-IoT-AS1,48-port access,49,10
+Kolkata-IoT-AS2,48-port access,49,10
+Kolkata-IoT-AS3,48-port access,49,10
+Kolkata-IoT-AS4,48-port access,49,10
+Kolkata-IoT-AS5,48-port access,49,10
+Kolkata-IoT-AS6,48-port access,49,10
+Kolkata-IoT-AS7,48-port access,49,10
+Kolkata-IoT-AS8,48-port access,49,10
+Kolkata-IoT-AS9,48-port access,49,10
+Kolkata-IoT-AS10,48-port access,9,10
+Kolkata-Scanners-AS1,48-port access,49,20
+Kolkata-Scanners-AS2,48-port access,49,20
+Kolkata-Scanners-AS3,48-port access,15,20
+Kolkata-DS,48-port multilayer distribution,14,
+CloudVPC-Services-AS1,48-port access,23,10
+CloudVPC-DS,48-port multilayer distribution,2,
+Delhi-R1,IOS XE WAN edge,2,
+Delhi-R2,IOS XE WAN edge,2,
+Mumbai-R1,IOS XE WAN edge,2,
+Chennai-R1,IOS XE WAN edge,2,
+Kolkata-R1,IOS XE WAN edge,2,
+CloudVPC-R1,IOS XE WAN edge,2,
+PROVIDER,simulated managed-WAN router,6,

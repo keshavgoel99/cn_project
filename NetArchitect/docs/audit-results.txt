@@ -1,0 +1,7 @@
+Wildcard DRAFT: /25 wildcard=0.0.0.255; source 10.0.0.200 -> permit
+Wildcard FIXED: /25 wildcard=0.0.0.127; source 10.0.0.200 -> deny
+Trunk DRAFT: unassigned VLAN 20 allowed=True
+Trunk FIXED: unassigned VLAN 20 allowed=False
+QoS DRAFT: DSCP 0 equals AF31 (26)=False; Finance packet misses class
+QoS FIXED: unmarked Finance source 10.20.0.2 classifier decision=permit
+Scope: offline ACL/VLAN/classifier evaluation, not captured IOS traffic.

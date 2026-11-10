@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netarchitect-cic307"
+version = "1.0.0"
+description = "Rule-based network planning for the CIC-307 mini-project"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+netarchitect = "netarchitect.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["netarchitect*"]

@@ -1,0 +1,39 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1100' height='600' viewBox='0 0 1100 600' role='img' aria-labelledby='title desc'>
+<title id='title'>Metro MAN topology</title>
+<desc id='desc'>Hub and spoke logical topology with per-site distribution and access switches. Dashed paths are secondary links.</desc>
+<style>text{font-family:Arial,sans-serif;fill:#183441;font-size:14px}.small{font-size:12px;fill:#516b77}.box{fill:#edf4f7;stroke:#396577;stroke-width:1.5}.edge{fill:#dceee9;stroke:#26715b;stroke-width:1.5}line{stroke:#627f8c;stroke-width:2}.secondary{stroke-dasharray:7 5;stroke:#b08036}</style>
+<rect width='1100' height='600' fill='white'/>
+<text x='35' y='35' style='font-size:24px;font-weight:bold'>Metro MAN</text>
+<line x1='550' y1='110' x2='410' y2='160' class=''/>
+<line x1='410' y1='202' x2='275.0' y2='345' class=''/>
+<line x1='410' y1='202' x2='825.0' y2='345' class=''/>
+<line x1='550' y1='110' x2='690' y2='160' class='secondary'/>
+<line x1='690' y1='202' x2='275.0' y2='345' class='secondary'/>
+<line x1='690' y1='202' x2='825.0' y2='345' class='secondary'/>
+<line x1='275.0' y1='387' x2='275.0' y2='425' class=''/>
+<line x1='275.0' y1='467' x2='275.0' y2='505' class=''/>
+<line x1='825.0' y1='387' x2='825.0' y2='425' class=''/>
+<line x1='825.0' y1='467' x2='825.0' y2='505' class=''/>
+<rect x='435.0' y='68' width='230' height='42' rx='5' class='box'/>
+<text x='550' y='94.0' text-anchor='middle' class=''>HQ-DS</text>
+<text x='550' y='56' text-anchor='middle' class='small'>7 access switches at hub</text>
+<rect x='310.0' y='160' width='200' height='42' rx='5' class='edge'/>
+<text x='410' y='186.0' text-anchor='middle' class=''>HQ-R1</text>
+<rect x='590.0' y='160' width='200' height='42' rx='5' class='edge'/>
+<text x='690' y='186.0' text-anchor='middle' class=''>HQ-R2</text>
+<text x='900' y='35' text-anchor='middle' class=''>OSPF Area 0 routed backbone</text>
+<rect x='175.0' y='345' width='200' height='42' rx='5' class='edge'/>
+<text x='275.0' y='371.0' text-anchor='middle' class=''>Remote1-R1</text>
+<rect x='175.0' y='425' width='200' height='42' rx='5' class='box'/>
+<text x='275.0' y='451.0' text-anchor='middle' class=''>Remote1-DS</text>
+<rect x='175.0' y='505' width='200' height='42' rx='5' class='box'/>
+<text x='275.0' y='531.0' text-anchor='middle' class=''>3 access switches</text>
+<text x='275.0' y='570' text-anchor='middle' class='small'>10.20.2.0/24</text>
+<rect x='725.0' y='345' width='200' height='42' rx='5' class='edge'/>
+<text x='825.0' y='371.0' text-anchor='middle' class=''>Remote2-R1</text>
+<rect x='725.0' y='425' width='200' height='42' rx='5' class='box'/>
+<text x='825.0' y='451.0' text-anchor='middle' class=''>Remote2-DS</text>
+<rect x='725.0' y='505' width='200' height='42' rx='5' class='box'/>
+<text x='825.0' y='531.0' text-anchor='middle' class=''>3 access switches</text>
+<text x='825.0' y='570' text-anchor='middle' class='small'>10.20.3.0/24</text>
+<text x='550' y='595' text-anchor='middle' class='small'>Each backbone line is a separate EVPL E-Line. Dashed lines are backup hub paths.</text></svg>

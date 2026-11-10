@@ -1,0 +1,47 @@
+device,role,active_ports,vlan
+Admin-Staff-AS1,48-port access,49,10
+Admin-Staff-AS2,48-port access,49,10
+Admin-Staff-AS3,48-port access,49,10
+Admin-Staff-AS4,48-port access,49,10
+Admin-Staff-AS5,48-port access,49,10
+Admin-Staff-AS6,48-port access,49,10
+Admin-Staff-AS7,48-port access,43,10
+Admin-WiFi-AS1,48-port PoE+ access,49,20
+Admin-WiFi-AS2,48-port PoE+ access,49,20
+Admin-WiFi-AS3,48-port PoE+ access,15,20
+Admin-DS,48-port multilayer distribution,11,
+Teaching-Students-AS1,48-port access,49,10
+Teaching-Students-AS2,48-port access,49,10
+Teaching-Students-AS3,48-port access,49,10
+Teaching-Students-AS4,48-port access,49,10
+Teaching-Students-AS5,48-port access,49,10
+Teaching-Students-AS6,48-port access,49,10
+Teaching-Students-AS7,48-port access,49,10
+Teaching-Students-AS8,48-port access,49,10
+Teaching-Students-AS9,48-port access,49,10
+Teaching-Students-AS10,48-port access,49,10
+Teaching-Students-AS11,48-port access,49,10
+Teaching-Students-AS12,48-port access,49,10
+Teaching-Students-AS13,48-port access,49,10
+Teaching-Students-AS14,48-port access,37,10
+Teaching-WiFi-AS1,48-port PoE+ access,49,20
+Teaching-WiFi-AS2,48-port PoE+ access,49,20
+Teaching-WiFi-AS3,48-port PoE+ access,15,20
+Teaching-DS,48-port multilayer distribution,18,
+Library-Readers-AS1,48-port access,49,10
+Library-Readers-AS2,48-port access,49,10
+Library-Readers-AS3,48-port access,49,10
+Library-Readers-AS4,48-port access,49,10
+Library-Readers-AS5,48-port access,49,10
+Library-Readers-AS6,48-port access,49,10
+Library-Readers-AS7,48-port access,49,10
+Library-Readers-AS8,48-port access,49,10
+Library-Readers-AS9,48-port access,49,10
+Library-Readers-AS10,48-port access,9,10
+Library-WiFi-AS1,48-port PoE+ access,49,20
+Library-WiFi-AS2,48-port PoE+ access,49,20
+Library-WiFi-AS3,48-port PoE+ access,15,20
+Library-DS,48-port multilayer distribution,14,
+Admin-R1,IOS router,3,
+Teaching-R1,IOS router,2,
+Library-R1,IOS router,2,

@@ -1,0 +1,46 @@
+device_a,port_a,device_b,port_b,purpose,subnet
+Admin-DS,Te1/0/1,Admin-Staff-AS1,Te1/1/1,802.1Q trunk,-
+Admin-DS,Te1/0/2,Admin-Staff-AS2,Te1/1/1,802.1Q trunk,-
+Admin-DS,Te1/0/3,Admin-Staff-AS3,Te1/1/1,802.1Q trunk,-
+Admin-DS,Te1/0/4,Admin-Staff-AS4,Te1/1/1,802.1Q trunk,-
+Admin-DS,Te1/0/5,Admin-Staff-AS5,Te1/1/1,802.1Q trunk,-
+Admin-DS,Te1/0/6,Admin-Staff-AS6,Te1/1/1,802.1Q trunk,-
+Admin-DS,Te1/0/7,Admin-Staff-AS7,Te1/1/1,802.1Q trunk,-
+Admin-DS,Te1/0/8,Admin-WiFi-AS1,Te1/1/1,802.1Q trunk,-
+Admin-DS,Te1/0/9,Admin-WiFi-AS2,Te1/1/1,802.1Q trunk,-
+Admin-DS,Te1/0/10,Admin-WiFi-AS3,Te1/1/1,802.1Q trunk,-
+Admin-DS,Te1/0/47,Admin-R1,Gi1,routed LAN uplink,10.10.16.8/30
+Teaching-DS,Te1/0/1,Teaching-Students-AS1,Te1/1/1,802.1Q trunk,-
+Teaching-DS,Te1/0/2,Teaching-Students-AS2,Te1/1/1,802.1Q trunk,-
+Teaching-DS,Te1/0/3,Teaching-Students-AS3,Te1/1/1,802.1Q trunk,-
+Teaching-DS,Te1/0/4,Teaching-Students-AS4,Te1/1/1,802.1Q trunk,-
+Teaching-DS,Te1/0/5,Teaching-Students-AS5,Te1/1/1,802.1Q trunk,-
+Teaching-DS,Te1/0/6,Teaching-Students-AS6,Te1/1/1,802.1Q trunk,-
+Teaching-DS,Te1/0/7,Teaching-Students-AS7,Te1/1/1,802.1Q trunk,-
+Teaching-DS,Te1/0/8,Teaching-Students-AS8,Te1/1/1,802.1Q trunk,-
+Teaching-DS,Te1/0/9,Teaching-Students-AS9,Te1/1/1,802.1Q trunk,-
+Teaching-DS,Te1/0/10,Teaching-Students-AS10,Te1/1/1,802.1Q trunk,-
+Teaching-DS,Te1/0/11,Teaching-Students-AS11,Te1/1/1,802.1Q trunk,-
+Teaching-DS,Te1/0/12,Teaching-Students-AS12,Te1/1/1,802.1Q trunk,-
+Teaching-DS,Te1/0/13,Teaching-Students-AS13,Te1/1/1,802.1Q trunk,-
+Teaching-DS,Te1/0/14,Teaching-Students-AS14,Te1/1/1,802.1Q trunk,-
+Teaching-DS,Te1/0/15,Teaching-WiFi-AS1,Te1/1/1,802.1Q trunk,-
+Teaching-DS,Te1/0/16,Teaching-WiFi-AS2,Te1/1/1,802.1Q trunk,-
+Teaching-DS,Te1/0/17,Teaching-WiFi-AS3,Te1/1/1,802.1Q trunk,-
+Teaching-DS,Te1/0/47,Teaching-R1,Gi1,routed LAN uplink,10.10.16.16/30
+Library-DS,Te1/0/1,Library-Readers-AS1,Te1/1/1,802.1Q trunk,-
+Library-DS,Te1/0/2,Library-Readers-AS2,Te1/1/1,802.1Q trunk,-
+Library-DS,Te1/0/3,Library-Readers-AS3,Te1/1/1,802.1Q trunk,-
+Library-DS,Te1/0/4,Library-Readers-AS4,Te1/1/1,802.1Q trunk,-
+Library-DS,Te1/0/5,Library-Readers-AS5,Te1/1/1,802.1Q trunk,-
+Library-DS,Te1/0/6,Library-Readers-AS6,Te1/1/1,802.1Q trunk,-
+Library-DS,Te1/0/7,Library-Readers-AS7,Te1/1/1,802.1Q trunk,-
+Library-DS,Te1/0/8,Library-Readers-AS8,Te1/1/1,802.1Q trunk,-
+Library-DS,Te1/0/9,Library-Readers-AS9,Te1/1/1,802.1Q trunk,-
+Library-DS,Te1/0/10,Library-Readers-AS10,Te1/1/1,802.1Q trunk,-
+Library-DS,Te1/0/11,Library-WiFi-AS1,Te1/1/1,802.1Q trunk,-
+Library-DS,Te1/0/12,Library-WiFi-AS2,Te1/1/1,802.1Q trunk,-
+Library-DS,Te1/0/13,Library-WiFi-AS3,Te1/1/1,802.1Q trunk,-
+Library-DS,Te1/0/47,Library-R1,Gi1,routed LAN uplink,10.10.16.12/30
+Admin-R1,GigabitEthernet2,Teaching-R1,Gi2,backbone / EVPL E-Line,10.10.16.4/30
+Admin-R1,GigabitEthernet3,Library-R1,Gi2,backbone / EVPL E-Line,10.10.16.0/30

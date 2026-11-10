@@ -1,0 +1,121 @@
+{
+  "method": "Offline integer/IP, logical graph and generated-ACL evaluation; no IOS execution.",
+  "passed": true,
+  "checks": [
+    {
+      "name": "non_overlapping_subnets",
+      "passed": true,
+      "detail": "Pairwise comparison of active VLAN, LAN transit and backbone/tunnel subnets."
+    },
+    {
+      "name": "inside_root",
+      "passed": true,
+      "detail": "Every active private subnet belongs to the input root."
+    },
+    {
+      "name": "normal_connectivity",
+      "passed": true,
+      "detail": "Logical topology graph reaches every distribution switch."
+    },
+    {
+      "name": "hub_failure:HQ-R1",
+      "passed": true,
+      "detail": "Logical alternate path remains after removing this hub. Convergence time is not modelled."
+    },
+    {
+      "name": "hub_failure:HQ-R2",
+      "passed": true,
+      "detail": "Logical alternate path remains after removing this hub. Convergence time is not modelled."
+    },
+    {
+      "name": "gateway:HQ:Finance",
+      "passed": true,
+      "detail": "ICMP 10.20.0.2 -> 10.20.0.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:HQ:Finance",
+      "passed": true,
+      "detail": "ICMP 10.20.0.2 -> 10.20.2.2: expected permit. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:HQ:Finance",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:HQ:Guest",
+      "passed": true,
+      "detail": "ICMP 10.20.1.2 -> 10.20.1.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:HQ:Guest",
+      "passed": true,
+      "detail": "ICMP 10.20.1.2 -> 10.20.2.2: expected deny. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:HQ:Guest",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:Remote1:Finance",
+      "passed": true,
+      "detail": "ICMP 10.20.2.2 -> 10.20.2.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Remote1:Finance",
+      "passed": true,
+      "detail": "ICMP 10.20.2.2 -> 10.20.0.2: expected permit. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Remote1:Finance",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:Remote1:Guest",
+      "passed": true,
+      "detail": "ICMP 10.20.2.130 -> 10.20.2.129 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Remote1:Guest",
+      "passed": true,
+      "detail": "ICMP 10.20.2.130 -> 10.20.0.2: expected deny. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Remote1:Guest",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:Remote2:Finance",
+      "passed": true,
+      "detail": "ICMP 10.20.3.2 -> 10.20.3.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Remote2:Finance",
+      "passed": true,
+      "detail": "ICMP 10.20.3.2 -> 10.20.0.2: expected permit. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Remote2:Finance",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:Remote2:Guest",
+      "passed": true,
+      "detail": "ICMP 10.20.3.130 -> 10.20.3.129 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Remote2:Guest",
+      "passed": true,
+      "detail": "ICMP 10.20.3.130 -> 10.20.0.2: expected deny. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Remote2:Guest",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    }
+  ]
+}

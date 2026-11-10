@@ -1,0 +1,74 @@
+device_a,port_a,device_b,port_b,purpose,subnet
+Delhi-DS,Te1/0/1,Delhi-IoT-AS1,Te1/1/1,802.1Q trunk,-
+Delhi-DS,Te1/0/2,Delhi-IoT-AS2,Te1/1/1,802.1Q trunk,-
+Delhi-DS,Te1/0/3,Delhi-IoT-AS3,Te1/1/1,802.1Q trunk,-
+Delhi-DS,Te1/0/4,Delhi-IoT-AS4,Te1/1/1,802.1Q trunk,-
+Delhi-DS,Te1/0/5,Delhi-IoT-AS5,Te1/1/1,802.1Q trunk,-
+Delhi-DS,Te1/0/6,Delhi-IoT-AS6,Te1/1/1,802.1Q trunk,-
+Delhi-DS,Te1/0/7,Delhi-IoT-AS7,Te1/1/1,802.1Q trunk,-
+Delhi-DS,Te1/0/8,Delhi-IoT-AS8,Te1/1/1,802.1Q trunk,-
+Delhi-DS,Te1/0/9,Delhi-IoT-AS9,Te1/1/1,802.1Q trunk,-
+Delhi-DS,Te1/0/10,Delhi-IoT-AS10,Te1/1/1,802.1Q trunk,-
+Delhi-DS,Te1/0/11,Delhi-Scanners-AS1,Te1/1/1,802.1Q trunk,-
+Delhi-DS,Te1/0/12,Delhi-Scanners-AS2,Te1/1/1,802.1Q trunk,-
+Delhi-DS,Te1/0/13,Delhi-Scanners-AS3,Te1/1/1,802.1Q trunk,-
+Delhi-DS,Te1/0/47,Delhi-R1,Gi1,routed LAN uplink,10.30.16.72/30
+Delhi-DS,Te1/0/48,Delhi-R2,Gi1,routed LAN uplink,10.30.16.76/30
+Mumbai-DS,Te1/0/1,Mumbai-IoT-AS1,Te1/1/1,802.1Q trunk,-
+Mumbai-DS,Te1/0/2,Mumbai-IoT-AS2,Te1/1/1,802.1Q trunk,-
+Mumbai-DS,Te1/0/3,Mumbai-IoT-AS3,Te1/1/1,802.1Q trunk,-
+Mumbai-DS,Te1/0/4,Mumbai-IoT-AS4,Te1/1/1,802.1Q trunk,-
+Mumbai-DS,Te1/0/5,Mumbai-IoT-AS5,Te1/1/1,802.1Q trunk,-
+Mumbai-DS,Te1/0/6,Mumbai-IoT-AS6,Te1/1/1,802.1Q trunk,-
+Mumbai-DS,Te1/0/7,Mumbai-IoT-AS7,Te1/1/1,802.1Q trunk,-
+Mumbai-DS,Te1/0/8,Mumbai-IoT-AS8,Te1/1/1,802.1Q trunk,-
+Mumbai-DS,Te1/0/9,Mumbai-IoT-AS9,Te1/1/1,802.1Q trunk,-
+Mumbai-DS,Te1/0/10,Mumbai-IoT-AS10,Te1/1/1,802.1Q trunk,-
+Mumbai-DS,Te1/0/11,Mumbai-Scanners-AS1,Te1/1/1,802.1Q trunk,-
+Mumbai-DS,Te1/0/12,Mumbai-Scanners-AS2,Te1/1/1,802.1Q trunk,-
+Mumbai-DS,Te1/0/13,Mumbai-Scanners-AS3,Te1/1/1,802.1Q trunk,-
+Mumbai-DS,Te1/0/47,Mumbai-R1,Gi1,routed LAN uplink,10.30.16.84/30
+Chennai-DS,Te1/0/1,Chennai-IoT-AS1,Te1/1/1,802.1Q trunk,-
+Chennai-DS,Te1/0/2,Chennai-IoT-AS2,Te1/1/1,802.1Q trunk,-
+Chennai-DS,Te1/0/3,Chennai-IoT-AS3,Te1/1/1,802.1Q trunk,-
+Chennai-DS,Te1/0/4,Chennai-IoT-AS4,Te1/1/1,802.1Q trunk,-
+Chennai-DS,Te1/0/5,Chennai-IoT-AS5,Te1/1/1,802.1Q trunk,-
+Chennai-DS,Te1/0/6,Chennai-IoT-AS6,Te1/1/1,802.1Q trunk,-
+Chennai-DS,Te1/0/7,Chennai-IoT-AS7,Te1/1/1,802.1Q trunk,-
+Chennai-DS,Te1/0/8,Chennai-IoT-AS8,Te1/1/1,802.1Q trunk,-
+Chennai-DS,Te1/0/9,Chennai-IoT-AS9,Te1/1/1,802.1Q trunk,-
+Chennai-DS,Te1/0/10,Chennai-IoT-AS10,Te1/1/1,802.1Q trunk,-
+Chennai-DS,Te1/0/11,Chennai-Scanners-AS1,Te1/1/1,802.1Q trunk,-
+Chennai-DS,Te1/0/12,Chennai-Scanners-AS2,Te1/1/1,802.1Q trunk,-
+Chennai-DS,Te1/0/13,Chennai-Scanners-AS3,Te1/1/1,802.1Q trunk,-
+Chennai-DS,Te1/0/47,Chennai-R1,Gi1,routed LAN uplink,10.30.16.64/30
+Kolkata-DS,Te1/0/1,Kolkata-IoT-AS1,Te1/1/1,802.1Q trunk,-
+Kolkata-DS,Te1/0/2,Kolkata-IoT-AS2,Te1/1/1,802.1Q trunk,-
+Kolkata-DS,Te1/0/3,Kolkata-IoT-AS3,Te1/1/1,802.1Q trunk,-
+Kolkata-DS,Te1/0/4,Kolkata-IoT-AS4,Te1/1/1,802.1Q trunk,-
+Kolkata-DS,Te1/0/5,Kolkata-IoT-AS5,Te1/1/1,802.1Q trunk,-
+Kolkata-DS,Te1/0/6,Kolkata-IoT-AS6,Te1/1/1,802.1Q trunk,-
+Kolkata-DS,Te1/0/7,Kolkata-IoT-AS7,Te1/1/1,802.1Q trunk,-
+Kolkata-DS,Te1/0/8,Kolkata-IoT-AS8,Te1/1/1,802.1Q trunk,-
+Kolkata-DS,Te1/0/9,Kolkata-IoT-AS9,Te1/1/1,802.1Q trunk,-
+Kolkata-DS,Te1/0/10,Kolkata-IoT-AS10,Te1/1/1,802.1Q trunk,-
+Kolkata-DS,Te1/0/11,Kolkata-Scanners-AS1,Te1/1/1,802.1Q trunk,-
+Kolkata-DS,Te1/0/12,Kolkata-Scanners-AS2,Te1/1/1,802.1Q trunk,-
+Kolkata-DS,Te1/0/13,Kolkata-Scanners-AS3,Te1/1/1,802.1Q trunk,-
+Kolkata-DS,Te1/0/47,Kolkata-R1,Gi1,routed LAN uplink,10.30.16.80/30
+CloudVPC-DS,Te1/0/1,CloudVPC-Services-AS1,Te1/1/1,802.1Q trunk,-
+CloudVPC-DS,Te1/0/47,CloudVPC-R1,Gi1,routed LAN uplink,10.30.16.68/30
+Delhi-R1,Gi2,PROVIDER,Gi1,WAN underlay,198.18.0.0/30
+Delhi-R1,Tunnel1,Mumbai-R1,Tunnel1,encrypted overlay (logical),10.30.16.44/30
+Delhi-R1,Tunnel2,Chennai-R1,Tunnel2,encrypted overlay (logical),10.30.16.32/30
+Delhi-R1,Tunnel3,Kolkata-R1,Tunnel3,encrypted overlay (logical),10.30.16.40/30
+Delhi-R1,Tunnel4,CloudVPC-R1,Tunnel4,encrypted overlay (logical),10.30.16.36/30
+Delhi-R2,Gi2,PROVIDER,Gi2,WAN underlay,198.18.0.4/30
+Delhi-R2,Tunnel5,Mumbai-R1,Tunnel5,encrypted overlay (logical),10.30.16.60/30
+Delhi-R2,Tunnel6,Chennai-R1,Tunnel6,encrypted overlay (logical),10.30.16.48/30
+Delhi-R2,Tunnel7,Kolkata-R1,Tunnel7,encrypted overlay (logical),10.30.16.56/30
+Delhi-R2,Tunnel8,CloudVPC-R1,Tunnel8,encrypted overlay (logical),10.30.16.52/30
+Mumbai-R1,Gi2,PROVIDER,Gi3,WAN underlay,198.18.0.8/30
+Chennai-R1,Gi2,PROVIDER,Gi4,WAN underlay,198.18.0.12/30
+Kolkata-R1,Gi2,PROVIDER,Gi5,WAN underlay,198.18.0.16/30
+CloudVPC-R1,Gi2,PROVIDER,Gi6,WAN underlay,198.18.0.20/30

@@ -1,0 +1,10 @@
+site,group,vlan,host_ip,mask,gateway,isolated
+Delhi,IoT,10,10.30.4.2,255.255.254.0,10.30.4.1,True
+Delhi,Scanners,20,10.30.6.2,255.255.255.128,10.30.6.1,False
+Mumbai,IoT,10,10.30.12.2,255.255.254.0,10.30.12.1,True
+Mumbai,Scanners,20,10.30.14.2,255.255.255.128,10.30.14.1,False
+Chennai,IoT,10,10.30.0.2,255.255.254.0,10.30.0.1,True
+Chennai,Scanners,20,10.30.2.2,255.255.255.128,10.30.2.1,False
+Kolkata,IoT,10,10.30.8.2,255.255.254.0,10.30.8.1,True
+Kolkata,Scanners,20,10.30.10.2,255.255.255.128,10.30.10.1,False
+CloudVPC,Services,10,10.30.16.2,255.255.255.224,10.30.16.1,False

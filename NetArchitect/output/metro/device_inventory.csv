@@ -1,0 +1,21 @@
+device,role,active_ports,vlan
+HQ-Finance-AS1,48-port access,49,10
+HQ-Finance-AS2,48-port access,49,10
+HQ-Finance-AS3,48-port access,49,10
+HQ-Finance-AS4,48-port access,49,10
+HQ-Finance-AS5,48-port access,49,10
+HQ-Finance-AS6,48-port access,3,10
+HQ-Guest-AS1,48-port access,34,20
+HQ-DS,48-port multilayer distribution,9,
+Remote1-Finance-AS1,48-port access,49,10
+Remote1-Finance-AS2,48-port access,41,10
+Remote1-Guest-AS1,48-port access,23,20
+Remote1-DS,48-port multilayer distribution,4,
+Remote2-Finance-AS1,48-port access,49,10
+Remote2-Finance-AS2,48-port access,41,10
+Remote2-Guest-AS1,48-port access,23,20
+Remote2-DS,48-port multilayer distribution,4,
+HQ-R1,IOS router,3,
+HQ-R2,IOS router,3,
+Remote1-R1,IOS router,3,
+Remote2-R1,IOS router,3,

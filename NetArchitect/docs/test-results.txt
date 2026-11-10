@@ -1,0 +1,30 @@
+test_bad_wildcard_permits_out_of_subnet_source (test_audit.AuditTests) ... ok
+test_trunk_admits_unassigned_vlan_in_draft (test_audit.AuditTests) ... ok
+test_unmarked_finance_would_miss_draft_qos (test_audit.AuditTests) ... ok
+test_custom_plan (test_cli.CLITests) ... ok
+test_end_to_end_and_safe_overwrite (test_cli.CLITests) ... ok
+test_malformed_and_missing_input (test_cli.CLITests) ... ok
+test_distance_boundaries (test_media.MediaTests) ... ok
+test_explicit_copper_and_fibre_violations (test_media.MediaTests) ... ok
+test_invalid_distance (test_media.MediaTests) ... ok
+test_optical_budget_not_just_reach (test_media.MediaTests) ... ok
+test_bad_custom_inputs (test_planner.PlannerTests) ... ok
+test_bgp_filters_and_ipsec_both_ends (test_planner.PlannerTests) ... ok
+test_global_does_not_use_direct_intercity_optics (test_planner.PlannerTests) ... ok
+test_growth_reserves_gateway (test_planner.PlannerTests) ... ok
+test_hq_media_request_is_checked (test_planner.PlannerTests) ... ok
+test_real_multi_area_custom_plan (test_planner.PlannerTests) ... ok
+test_redundancy (test_planner.PlannerTests) ... ok
+test_routing_cutoff (test_planner.PlannerTests) ... ok
+test_three_complete_presets (test_planner.PlannerTests) ... ok
+test_all_masks_against_independent_library (test_subnetting.SubnetTests) ... ok
+test_exact_fit (test_subnetting.SubnetTests) ... ok
+test_exhaustion_and_invalid_inputs (test_subnetting.SubnetTests) ... ok
+test_host_boundaries (test_subnetting.SubnetTests) ... ok
+test_random_allocations_against_ipaddress (test_subnetting.SubnetTests) ... ok
+test_sort_alignment_and_broadcast (test_subnetting.SubnetTests) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.145s
+
+OK

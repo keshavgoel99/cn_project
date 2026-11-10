@@ -1,0 +1,166 @@
+{
+  "method": "Offline integer/IP, logical graph and generated-ACL evaluation; no IOS execution.",
+  "passed": true,
+  "checks": [
+    {
+      "name": "non_overlapping_subnets",
+      "passed": true,
+      "detail": "Pairwise comparison of active VLAN, LAN transit and backbone/tunnel subnets."
+    },
+    {
+      "name": "inside_root",
+      "passed": true,
+      "detail": "Every active private subnet belongs to the input root."
+    },
+    {
+      "name": "normal_connectivity",
+      "passed": true,
+      "detail": "Logical topology graph reaches every distribution switch."
+    },
+    {
+      "name": "hub_failure:Delhi-R1",
+      "passed": true,
+      "detail": "Logical alternate path remains after removing this hub. Convergence time is not modelled."
+    },
+    {
+      "name": "hub_failure:Delhi-R2",
+      "passed": true,
+      "detail": "Logical alternate path remains after removing this hub. Convergence time is not modelled."
+    },
+    {
+      "name": "gateway:Delhi:IoT",
+      "passed": true,
+      "detail": "ICMP 10.30.4.2 -> 10.30.4.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Delhi:IoT",
+      "passed": true,
+      "detail": "ICMP 10.30.4.2 -> 10.30.12.2: expected deny. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Delhi:IoT",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:Delhi:Scanners",
+      "passed": true,
+      "detail": "ICMP 10.30.6.2 -> 10.30.6.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Delhi:Scanners",
+      "passed": true,
+      "detail": "ICMP 10.30.6.2 -> 10.30.12.2: expected permit. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Delhi:Scanners",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:Mumbai:IoT",
+      "passed": true,
+      "detail": "ICMP 10.30.12.2 -> 10.30.12.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Mumbai:IoT",
+      "passed": true,
+      "detail": "ICMP 10.30.12.2 -> 10.30.4.2: expected deny. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Mumbai:IoT",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:Mumbai:Scanners",
+      "passed": true,
+      "detail": "ICMP 10.30.14.2 -> 10.30.14.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Mumbai:Scanners",
+      "passed": true,
+      "detail": "ICMP 10.30.14.2 -> 10.30.4.2: expected permit. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Mumbai:Scanners",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:Chennai:IoT",
+      "passed": true,
+      "detail": "ICMP 10.30.0.2 -> 10.30.0.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Chennai:IoT",
+      "passed": true,
+      "detail": "ICMP 10.30.0.2 -> 10.30.4.2: expected deny. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Chennai:IoT",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:Chennai:Scanners",
+      "passed": true,
+      "detail": "ICMP 10.30.2.2 -> 10.30.2.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Chennai:Scanners",
+      "passed": true,
+      "detail": "ICMP 10.30.2.2 -> 10.30.4.2: expected permit. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Chennai:Scanners",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:Kolkata:IoT",
+      "passed": true,
+      "detail": "ICMP 10.30.8.2 -> 10.30.8.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Kolkata:IoT",
+      "passed": true,
+      "detail": "ICMP 10.30.8.2 -> 10.30.4.2: expected deny. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Kolkata:IoT",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:Kolkata:Scanners",
+      "passed": true,
+      "detail": "ICMP 10.30.10.2 -> 10.30.10.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:Kolkata:Scanners",
+      "passed": true,
+      "detail": "ICMP 10.30.10.2 -> 10.30.4.2: expected permit. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:Kolkata:Scanners",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    },
+    {
+      "name": "gateway:CloudVPC:Services",
+      "passed": true,
+      "detail": "ICMP 10.30.16.2 -> 10.30.16.1 permitted by the inbound SVI ACL."
+    },
+    {
+      "name": "intersite_acl:CloudVPC:Services",
+      "passed": true,
+      "detail": "ICMP 10.30.16.2 -> 10.30.4.2: expected permit. This is an ACL check, not an end-to-end ping."
+    },
+    {
+      "name": "spoofed_source:CloudVPC:Services",
+      "passed": true,
+      "detail": "Source outside the VLAN subnet must hit deny ip any any."
+    }
+  ]
+}

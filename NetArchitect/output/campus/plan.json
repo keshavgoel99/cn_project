@@ -1,0 +1,692 @@
+{
+  "name": "Campus LAN",
+  "profile": "campus",
+  "root": "10.10.0.0/16",
+  "input": {
+    "name": "Campus LAN",
+    "profile": "campus",
+    "root": "10.10.0.0/16",
+    "resilient": false,
+    "growth_percent": 10,
+    "access_distance_m": 70,
+    "sites": [
+      {
+        "name": "Admin",
+        "distance_m": 50,
+        "groups": [
+          {
+            "name": "Staff",
+            "hosts": 300,
+            "vlan": 10,
+            "isolated": false,
+            "poe": false
+          },
+          {
+            "name": "WiFi",
+            "hosts": 100,
+            "vlan": 20,
+            "isolated": false,
+            "poe": true
+          }
+        ]
+      },
+      {
+        "name": "Teaching",
+        "distance_m": 220,
+        "groups": [
+          {
+            "name": "Students",
+            "hosts": 600,
+            "vlan": 10,
+            "isolated": false,
+            "poe": false
+          },
+          {
+            "name": "WiFi",
+            "hosts": 100,
+            "vlan": 20,
+            "isolated": false,
+            "poe": true
+          }
+        ]
+      },
+      {
+        "name": "Library",
+        "distance_m": 380,
+        "groups": [
+          {
+            "name": "Readers",
+            "hosts": 400,
+            "vlan": 10,
+            "isolated": false,
+            "poe": false
+          },
+          {
+            "name": "WiFi",
+            "hosts": 100,
+            "vlan": 20,
+            "isolated": false,
+            "poe": true
+          }
+        ]
+      }
+    ]
+  },
+  "endpoint_count": 1600,
+  "sites": [
+    {
+      "name": "Admin",
+      "index": 0,
+      "groups": [
+        {
+          "name": "Staff",
+          "hosts": 300,
+          "vlan": 10,
+          "isolated": false,
+          "poe": false,
+          "planned_endpoints": 330,
+          "required_usable": 331,
+          "access_switches": 7,
+          "subnet": {
+            "name": "Staff",
+            "network": "10.10.8.0/23",
+            "prefix": 23,
+            "mask": "255.255.254.0",
+            "wildcard": "0.0.1.255",
+            "gateway": "10.10.8.1",
+            "first_usable": "10.10.8.1",
+            "last_usable": "10.10.9.254",
+            "broadcast": "10.10.9.255",
+            "required_usable": 331,
+            "usable_capacity": 510,
+            "total_addresses": 512,
+            "utilization_percent": 64.9,
+            "reason": "2^9 - 2 = 510 usable addresses >= 331; /24 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address."
+          },
+          "distribution_ports": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "name": "WiFi",
+          "hosts": 100,
+          "vlan": 20,
+          "isolated": false,
+          "poe": true,
+          "planned_endpoints": 110,
+          "required_usable": 111,
+          "access_switches": 3,
+          "subnet": {
+            "name": "WiFi",
+            "network": "10.10.10.0/25",
+            "prefix": 25,
+            "mask": "255.255.255.128",
+            "wildcard": "0.0.0.127",
+            "gateway": "10.10.10.1",
+            "first_usable": "10.10.10.1",
+            "last_usable": "10.10.10.126",
+            "broadcast": "10.10.10.127",
+            "required_usable": 111,
+            "usable_capacity": 126,
+            "total_addresses": 128,
+            "utilization_percent": 88.1,
+            "reason": "2^7 - 2 = 126 usable addresses >= 111; /26 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address."
+          },
+          "distribution_ports": [
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "block_hosts": 1022,
+      "access_switch_count": 10,
+      "asn": 65100,
+      "area": 1,
+      "distance_m": 50,
+      "summary": "10.10.8.0/22"
+    },
+    {
+      "name": "Teaching",
+      "index": 1,
+      "groups": [
+        {
+          "name": "Students",
+          "hosts": 600,
+          "vlan": 10,
+          "isolated": false,
+          "poe": false,
+          "planned_endpoints": 660,
+          "required_usable": 661,
+          "access_switches": 14,
+          "subnet": {
+            "name": "Students",
+            "network": "10.10.0.0/22",
+            "prefix": 22,
+            "mask": "255.255.252.0",
+            "wildcard": "0.0.3.255",
+            "gateway": "10.10.0.1",
+            "first_usable": "10.10.0.1",
+            "last_usable": "10.10.3.254",
+            "broadcast": "10.10.3.255",
+            "required_usable": 661,
+            "usable_capacity": 1022,
+            "total_addresses": 1024,
+            "utilization_percent": 64.68,
+            "reason": "2^10 - 2 = 1022 usable addresses >= 661; /23 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address."
+          },
+          "distribution_ports": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "name": "WiFi",
+          "hosts": 100,
+          "vlan": 20,
+          "isolated": false,
+          "poe": true,
+          "planned_endpoints": 110,
+          "required_usable": 111,
+          "access_switches": 3,
+          "subnet": {
+            "name": "WiFi",
+            "network": "10.10.4.0/25",
+            "prefix": 25,
+            "mask": "255.255.255.128",
+            "wildcard": "0.0.0.127",
+            "gateway": "10.10.4.1",
+            "first_usable": "10.10.4.1",
+            "last_usable": "10.10.4.126",
+            "broadcast": "10.10.4.127",
+            "required_usable": 111,
+            "usable_capacity": 126,
+            "total_addresses": 128,
+            "utilization_percent": 88.1,
+            "reason": "2^7 - 2 = 126 usable addresses >= 111; /26 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address."
+          },
+          "distribution_ports": [
+            15,
+            16,
+            17
+          ]
+        }
+      ],
+      "block_hosts": 2046,
+      "access_switch_count": 17,
+      "asn": 65101,
+      "area": 2,
+      "distance_m": 220,
+      "summary": "10.10.0.0/21"
+    },
+    {
+      "name": "Library",
+      "index": 2,
+      "groups": [
+        {
+          "name": "Readers",
+          "hosts": 400,
+          "vlan": 10,
+          "isolated": false,
+          "poe": false,
+          "planned_endpoints": 440,
+          "required_usable": 441,
+          "access_switches": 10,
+          "subnet": {
+            "name": "Readers",
+            "network": "10.10.12.0/23",
+            "prefix": 23,
+            "mask": "255.255.254.0",
+            "wildcard": "0.0.1.255",
+            "gateway": "10.10.12.1",
+            "first_usable": "10.10.12.1",
+            "last_usable": "10.10.13.254",
+            "broadcast": "10.10.13.255",
+            "required_usable": 441,
+            "usable_capacity": 510,
+            "total_addresses": 512,
+            "utilization_percent": 86.47,
+            "reason": "2^9 - 2 = 510 usable addresses >= 441; /24 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address."
+          },
+          "distribution_ports": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "name": "WiFi",
+          "hosts": 100,
+          "vlan": 20,
+          "isolated": false,
+          "poe": true,
+          "planned_endpoints": 110,
+          "required_usable": 111,
+          "access_switches": 3,
+          "subnet": {
+            "name": "WiFi",
+            "network": "10.10.14.0/25",
+            "prefix": 25,
+            "mask": "255.255.255.128",
+            "wildcard": "0.0.0.127",
+            "gateway": "10.10.14.1",
+            "first_usable": "10.10.14.1",
+            "last_usable": "10.10.14.126",
+            "broadcast": "10.10.14.127",
+            "required_usable": 111,
+            "usable_capacity": 126,
+            "total_addresses": 128,
+            "utilization_percent": 88.1,
+            "reason": "2^7 - 2 = 126 usable addresses >= 111; /26 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address."
+          },
+          "distribution_ports": [
+            11,
+            12,
+            13
+          ]
+        }
+      ],
+      "block_hosts": 1022,
+      "access_switch_count": 13,
+      "asn": 65102,
+      "area": 3,
+      "distance_m": 380,
+      "summary": "10.10.12.0/22"
+    }
+  ],
+  "edges": [
+    {
+      "name": "Admin-R1",
+      "site": "Admin",
+      "site_index": 0,
+      "hub_copy": 0,
+      "ports": 3,
+      "router_id": "192.0.2.1",
+      "lan": {
+        "name": "lan:Admin-R1",
+        "network": "10.10.16.8/30",
+        "prefix": 30,
+        "mask": "255.255.255.252",
+        "wildcard": "0.0.0.3",
+        "gateway": "10.10.16.9",
+        "first_usable": "10.10.16.9",
+        "last_usable": "10.10.16.10",
+        "broadcast": "10.10.16.11",
+        "required_usable": 2,
+        "usable_capacity": 2,
+        "total_addresses": 4,
+        "utilization_percent": 100.0,
+        "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+      }
+    },
+    {
+      "name": "Teaching-R1",
+      "site": "Teaching",
+      "site_index": 1,
+      "hub_copy": 0,
+      "ports": 2,
+      "router_id": "192.0.2.2",
+      "lan": {
+        "name": "lan:Teaching-R1",
+        "network": "10.10.16.16/30",
+        "prefix": 30,
+        "mask": "255.255.255.252",
+        "wildcard": "0.0.0.3",
+        "gateway": "10.10.16.17",
+        "first_usable": "10.10.16.17",
+        "last_usable": "10.10.16.18",
+        "broadcast": "10.10.16.19",
+        "required_usable": 2,
+        "usable_capacity": 2,
+        "total_addresses": 4,
+        "utilization_percent": 100.0,
+        "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+      }
+    },
+    {
+      "name": "Library-R1",
+      "site": "Library",
+      "site_index": 2,
+      "hub_copy": 0,
+      "ports": 2,
+      "router_id": "192.0.2.3",
+      "lan": {
+        "name": "lan:Library-R1",
+        "network": "10.10.16.12/30",
+        "prefix": 30,
+        "mask": "255.255.255.252",
+        "wildcard": "0.0.0.3",
+        "gateway": "10.10.16.13",
+        "first_usable": "10.10.16.13",
+        "last_usable": "10.10.16.14",
+        "broadcast": "10.10.16.15",
+        "required_usable": 2,
+        "usable_capacity": 2,
+        "total_addresses": 4,
+        "utilization_percent": 100.0,
+        "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+      }
+    }
+  ],
+  "links": [
+    {
+      "name": "backbone:Admin-R1:Teaching-R1",
+      "a": "Admin-R1",
+      "b": "Teaching-R1",
+      "a_port": 2,
+      "b_port": 2,
+      "secondary": false,
+      "subnet": {
+        "name": "backbone:Admin-R1:Teaching-R1",
+        "network": "10.10.16.4/30",
+        "prefix": 30,
+        "mask": "255.255.255.252",
+        "wildcard": "0.0.0.3",
+        "gateway": "10.10.16.5",
+        "first_usable": "10.10.16.5",
+        "last_usable": "10.10.16.6",
+        "broadcast": "10.10.16.7",
+        "required_usable": 2,
+        "usable_capacity": 2,
+        "total_addresses": 4,
+        "utilization_percent": 100.0,
+        "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+      }
+    },
+    {
+      "name": "backbone:Admin-R1:Library-R1",
+      "a": "Admin-R1",
+      "b": "Library-R1",
+      "a_port": 3,
+      "b_port": 2,
+      "secondary": false,
+      "subnet": {
+        "name": "backbone:Admin-R1:Library-R1",
+        "network": "10.10.16.0/30",
+        "prefix": 30,
+        "mask": "255.255.255.252",
+        "wildcard": "0.0.0.3",
+        "gateway": "10.10.16.1",
+        "first_usable": "10.10.16.1",
+        "last_usable": "10.10.16.2",
+        "broadcast": "10.10.16.3",
+        "required_usable": 2,
+        "usable_capacity": 2,
+        "total_addresses": 4,
+        "utilization_percent": 100.0,
+        "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+      }
+    }
+  ],
+  "allocations": [
+    {
+      "name": "Admin:Staff",
+      "network": "10.10.8.0/23",
+      "prefix": 23,
+      "mask": "255.255.254.0",
+      "wildcard": "0.0.1.255",
+      "gateway": "10.10.8.1",
+      "first_usable": "10.10.8.1",
+      "last_usable": "10.10.9.254",
+      "broadcast": "10.10.9.255",
+      "required_usable": 331,
+      "usable_capacity": 510,
+      "total_addresses": 512,
+      "utilization_percent": 64.9,
+      "reason": "2^9 - 2 = 510 usable addresses >= 331; /24 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address.",
+      "site": "Admin",
+      "vlan": 10
+    },
+    {
+      "name": "Admin:WiFi",
+      "network": "10.10.10.0/25",
+      "prefix": 25,
+      "mask": "255.255.255.128",
+      "wildcard": "0.0.0.127",
+      "gateway": "10.10.10.1",
+      "first_usable": "10.10.10.1",
+      "last_usable": "10.10.10.126",
+      "broadcast": "10.10.10.127",
+      "required_usable": 111,
+      "usable_capacity": 126,
+      "total_addresses": 128,
+      "utilization_percent": 88.1,
+      "reason": "2^7 - 2 = 126 usable addresses >= 111; /26 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address.",
+      "site": "Admin",
+      "vlan": 20
+    },
+    {
+      "name": "Teaching:Students",
+      "network": "10.10.0.0/22",
+      "prefix": 22,
+      "mask": "255.255.252.0",
+      "wildcard": "0.0.3.255",
+      "gateway": "10.10.0.1",
+      "first_usable": "10.10.0.1",
+      "last_usable": "10.10.3.254",
+      "broadcast": "10.10.3.255",
+      "required_usable": 661,
+      "usable_capacity": 1022,
+      "total_addresses": 1024,
+      "utilization_percent": 64.68,
+      "reason": "2^10 - 2 = 1022 usable addresses >= 661; /23 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address.",
+      "site": "Teaching",
+      "vlan": 10
+    },
+    {
+      "name": "Teaching:WiFi",
+      "network": "10.10.4.0/25",
+      "prefix": 25,
+      "mask": "255.255.255.128",
+      "wildcard": "0.0.0.127",
+      "gateway": "10.10.4.1",
+      "first_usable": "10.10.4.1",
+      "last_usable": "10.10.4.126",
+      "broadcast": "10.10.4.127",
+      "required_usable": 111,
+      "usable_capacity": 126,
+      "total_addresses": 128,
+      "utilization_percent": 88.1,
+      "reason": "2^7 - 2 = 126 usable addresses >= 111; /26 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address.",
+      "site": "Teaching",
+      "vlan": 20
+    },
+    {
+      "name": "Library:Readers",
+      "network": "10.10.12.0/23",
+      "prefix": 23,
+      "mask": "255.255.254.0",
+      "wildcard": "0.0.1.255",
+      "gateway": "10.10.12.1",
+      "first_usable": "10.10.12.1",
+      "last_usable": "10.10.13.254",
+      "broadcast": "10.10.13.255",
+      "required_usable": 441,
+      "usable_capacity": 510,
+      "total_addresses": 512,
+      "utilization_percent": 86.47,
+      "reason": "2^9 - 2 = 510 usable addresses >= 441; /24 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address.",
+      "site": "Library",
+      "vlan": 10
+    },
+    {
+      "name": "Library:WiFi",
+      "network": "10.10.14.0/25",
+      "prefix": 25,
+      "mask": "255.255.255.128",
+      "wildcard": "0.0.0.127",
+      "gateway": "10.10.14.1",
+      "first_usable": "10.10.14.1",
+      "last_usable": "10.10.14.126",
+      "broadcast": "10.10.14.127",
+      "required_usable": 111,
+      "usable_capacity": 126,
+      "total_addresses": 128,
+      "utilization_percent": 88.1,
+      "reason": "2^7 - 2 = 126 usable addresses >= 111; /26 would not fit. RFC 4632 CIDR alignment; gateway is the first usable address.",
+      "site": "Library",
+      "vlan": 20
+    },
+    {
+      "name": "lan:Admin-R1",
+      "network": "10.10.16.8/30",
+      "prefix": 30,
+      "mask": "255.255.255.252",
+      "wildcard": "0.0.0.3",
+      "gateway": "10.10.16.9",
+      "first_usable": "10.10.16.9",
+      "last_usable": "10.10.16.10",
+      "broadcast": "10.10.16.11",
+      "required_usable": 2,
+      "usable_capacity": 2,
+      "total_addresses": 4,
+      "utilization_percent": 100.0,
+      "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+    },
+    {
+      "name": "lan:Teaching-R1",
+      "network": "10.10.16.16/30",
+      "prefix": 30,
+      "mask": "255.255.255.252",
+      "wildcard": "0.0.0.3",
+      "gateway": "10.10.16.17",
+      "first_usable": "10.10.16.17",
+      "last_usable": "10.10.16.18",
+      "broadcast": "10.10.16.19",
+      "required_usable": 2,
+      "usable_capacity": 2,
+      "total_addresses": 4,
+      "utilization_percent": 100.0,
+      "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+    },
+    {
+      "name": "lan:Library-R1",
+      "network": "10.10.16.12/30",
+      "prefix": 30,
+      "mask": "255.255.255.252",
+      "wildcard": "0.0.0.3",
+      "gateway": "10.10.16.13",
+      "first_usable": "10.10.16.13",
+      "last_usable": "10.10.16.14",
+      "broadcast": "10.10.16.15",
+      "required_usable": 2,
+      "usable_capacity": 2,
+      "total_addresses": 4,
+      "utilization_percent": 100.0,
+      "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+    },
+    {
+      "name": "backbone:Admin-R1:Teaching-R1",
+      "network": "10.10.16.4/30",
+      "prefix": 30,
+      "mask": "255.255.255.252",
+      "wildcard": "0.0.0.3",
+      "gateway": "10.10.16.5",
+      "first_usable": "10.10.16.5",
+      "last_usable": "10.10.16.6",
+      "broadcast": "10.10.16.7",
+      "required_usable": 2,
+      "usable_capacity": 2,
+      "total_addresses": 4,
+      "utilization_percent": 100.0,
+      "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+    },
+    {
+      "name": "backbone:Admin-R1:Library-R1",
+      "network": "10.10.16.0/30",
+      "prefix": 30,
+      "mask": "255.255.255.252",
+      "wildcard": "0.0.0.3",
+      "gateway": "10.10.16.1",
+      "first_usable": "10.10.16.1",
+      "last_usable": "10.10.16.2",
+      "broadcast": "10.10.16.3",
+      "required_usable": 2,
+      "usable_capacity": 2,
+      "total_addresses": 4,
+      "utilization_percent": 100.0,
+      "reason": "2^2 - 2 = 2 usable addresses >= 2; /31 links are excluded by this lab's conventional network/broadcast model. RFC 4632 CIDR alignment; gateway is the first usable address."
+    }
+  ],
+  "routing": {
+    "protocol": "OSPF Area 0",
+    "reason": "One administrative domain and 11 active subnets (<50) fit the assignment's single-area rule. OSPF (RFC 2328) computes shortest paths and recalculates after failure. The 50-subnet cutoff is an assignment policy, not an RFC protocol limit."
+  },
+  "media": [
+    {
+      "name": "Endpoint access",
+      "medium": "Cat6a",
+      "transceiver": "10GBASE-T",
+      "distance_m": 70,
+      "reason": "70 m <= 100 m: Cat6a supports the assignment's 10GBASE-T access channel (IEEE 802.3an). The channel includes patch leads."
+    },
+    {
+      "name": "In-rack links",
+      "medium": "Cat6a",
+      "transceiver": "10GBASE-T",
+      "distance_m": 5,
+      "reason": "5 m <= 100 m: Cat6a supports the assignment's 10GBASE-T access channel (IEEE 802.3an). The channel includes patch leads."
+    },
+    {
+      "name": "HQ local routed uplink",
+      "medium": "Cat6a",
+      "transceiver": "10GBASE-T",
+      "distance_m": 50,
+      "reason": "50 m <= 100 m: Cat6a supports the assignment's 10GBASE-T access channel (IEEE 802.3an). The channel includes patch leads."
+    },
+    {
+      "name": "HQ to Teaching",
+      "medium": "OM4 MMF",
+      "transceiver": "10GBASE-SR",
+      "wavelength_nm": 850,
+      "distance_m": 220,
+      "reason": "220 m <= 400 m: OM4 with 850 nm SR optics fits the modal-bandwidth reach limit. Modal dispersion, not just attenuation, limits multimode reach. Verify the installed channel loss."
+    },
+    {
+      "name": "HQ to Library",
+      "medium": "OM4 MMF",
+      "transceiver": "10GBASE-SR",
+      "wavelength_nm": 850,
+      "distance_m": 380,
+      "reason": "380 m <= 400 m: OM4 with 850 nm SR optics fits the modal-bandwidth reach limit. Modal dispersion, not just attenuation, limits multimode reach. Verify the installed channel loss."
+    }
+  ],
+  "topology_reason": "One HQ edge router connects 2 remote sites. Routed links keep broadcasts local; 802.1Q trunks are limited to each access switch's VLAN and unused native VLAN 999. Rapid-PVST (RSTP per VLAN) protects local L2 wiring. 48-port access switches are counted from planned endpoints, with one VLAN per switch.",
+  "address_summary": {
+    "reserved_addresses": 4116,
+    "root_addresses": 65536,
+    "root_reserved_percent": 6.28,
+    "reason": "Each site's VLAN blocks are placed largest-first inside an aligned site aggregate. Site aggregates and /30 transit blocks are then placed largest-first in the root. Aggregates are reservations, not extra active subnets."
+  },
+  "warnings": [
+    "Configurations target a lab IOS/IOS XE feature set. Match interface names and supported commands to the chosen image before pasting.",
+    "End hosts use static addresses; DHCP, DNS, Internet access and NAT are outside this lab.",
+    "One distribution switch and one router at each remote site remain single points of failure.",
+    "Single hub selected: a hub or backbone failure disconnects the affected site."
+  ]
+}
